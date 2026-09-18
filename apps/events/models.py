@@ -6,6 +6,7 @@ class Event(models.Model):
     """
     Modelo de Evento. Cada evento pertenece a un único usuario (organizador).
     """
+
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,

@@ -27,9 +27,7 @@ class EventService:
         completed_tasks = sum(1 for task in tasks if task.status == "COMPLETED")
 
         progress_percentage = (
-            round((completed_tasks / total_tasks) * 100, 2)
-            if total_tasks > 0
-            else 0.0
+            round((completed_tasks / total_tasks) * 100, 2) if total_tasks > 0 else 0.0
         )
 
         return {

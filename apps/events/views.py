@@ -11,6 +11,7 @@ class EventViewSet(viewsets.ModelViewSet):
     ViewSet para listar, crear, consultar, actualizar y eliminar eventos.
     Garantiza aislamiento por usuario e inyección de prefetch anti N+1.
     """
+
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticated, IsOwner]
 
