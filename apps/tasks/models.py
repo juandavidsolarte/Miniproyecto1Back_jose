@@ -31,7 +31,7 @@ class TaskCategory(models.Model):
     def __str__(self):
         return f"{self.name} ({self.user.username})"
 
-
+#SUBTAREAS
 class LogisticTask(models.Model):
     """
     Tarea logística asociada a un evento.
@@ -122,3 +122,9 @@ class RescheduleHistory(models.Model):
 
     def __str__(self):
         return f"Reprogramación #{self.id} de Tarea '{self.task.title}' el {self.created_at.strftime('%Y-%m-%d')}"
+
+
+    from django.conf import settings
+from django.db import models
+
+#SUBTAREAS
